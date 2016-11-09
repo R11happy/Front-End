@@ -7,7 +7,8 @@
 }
 .leftArea{float: left;}
 .rightArea{float: right;}
-
+.hide{display: none;}
+.show{display: block;}
 /* topBar */
 .topBar
 {
@@ -112,7 +113,7 @@
     margin-left: 11px;
 }
 
-.nav,.shopClass
+.nav,.shopClass h3
 {
     font-family: "Microsoft YaHei", "微软雅黑";
 }
@@ -171,6 +172,8 @@
     color: #FFF;
 }
 
+.shopClass_item a:hover{text-decoration: underline;}
+
 .shopClass_item .aLink
 {
     width: 48px;
@@ -180,4 +183,87 @@
     text-align: center;
     line-height: 20px;
     text-decoration: underline;
+}
+
+/* shopClass_item active 的状态 */
+.shopClass_active
+{
+    background-color: #FFF;
+    border-left: #4593FD solid 1px;
+}
+
+.shopClass_active a
+{
+    color:#000;
+}
+.shopClass_active .aLink
+{
+    color: #FFF;
+    text-decoration: none;
+}
+.shopClass_active dt
+{
+    background:none;
+}
+/* 弹出的菜单 */
+.shopClass_list
+{
+    width: 568px;
+    border: #CCC solid 1px;
+    position: absolute;
+    left: 190px;
+    top: 35px;
+}
+
+.shopClass_cont
+{
+    padding:2px 20px;
+}
+
+.shopList_item
+{
+    padding:10px 0;
+    border-bottom:#CCC solid 1px;
+}
+
+.shopList_item dt
+{
+    color: #4B87D9;
+    font-weight: bold;
+    height: 24px;
+    line-height: 24px;
+}
+.shopList_item dd
+{
+    padding-left: 68px;
+    margin-top: -24px;
+    line-height: 24px;
+}
+.shopList_item dd a
+{
+    margin-right: 12px;
+}
+.shopList_links
+{
+    padding: 15px 0;
+}
+.shopList_links a
+{
+    color:#FFF;
+    background-color:#2785E6;
+    height: 26px;
+    line-height: 26px;
+    font-size: 12px;
+    display: inline-block;
+    padding:0 14px 0 8px;
+    margin-right: 10px;
+}
+
+.shopList_links span
+{
+    width: 11px;
+    height: 7px;
+    background: url(../images/icon/tri_shift.jpg) left center no-repeat;
+    display: inline-block;
+    margin-left: 7px;
 }

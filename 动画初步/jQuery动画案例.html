@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>仿照淘宝网的案例</title>
+    <style type="text/css">
+    div {
+        margin: 0;
+        padding: 0;
+    }
+
+    #move {
+        padding: 10px;
+        width: 300px;
+        background-color: #F4F4F4;
+        margin: 10px auto;
+        border: 1px solid #ccc;
+    }
+
+    #move a {
+        display: inline-block;
+        width: 58px;
+        height: 25px;
+        border: 1px solid #ddd;
+        border-radius: 3px;
+        background-color: #fff;
+        text-align: center;
+        margin: 10px 17px;
+        position: relative;
+        padding-top: 40px;
+        color: #9c9c9c;
+        font-size: 10px;
+        text-decoration: none;
+        overflow: hidden;
+    }
+
+    #move a i {
+        position: absolute;
+        /*距离顶部20像素*/
+        top: 20px;
+        left: 0;
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+        /*透明度为1*/
+        opacity: 1;
+    }
+
+    #move a p {
+        font-size: 10px;
+        font-family: "Microsoft YaHei", "微软雅黑";
+        background-color: #F7F7F7;
+    }
+
+    #move a:hover {
+        font-weight: bold;
+        color: #000;
+    }
+
+    #move img {
+        width: 32px;
+        height: 30px;
+        border: none;
+    }
+    </style>
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="jQuery_move.js"></script>
+</head>
+
+<body>
+    <div id="move">
+        <a href="#"><i><img src="images/icon_email.png" ></i><p>Gmail</p></a>
+        <a href="#"><i><img src="images/icon_facebook.png" ></i><p>Facebook</p></a>
+        <a href="#"><i><img src="images/icon_taobao.png" ></i><p>淘宝</p></a>
+        <a href="#"><i><img src="images/icon_QQ.png" ></i><p>QQ</p></a>
+        <a href="#"><i><img src="images/icon_linkedin.png" ></i><p>LinkedIn</p></a>
+        <a href="#"><i><img src="images/icon_Skye.png" ></i><p>Skye</p></a>
+    </div>
+</body>
+
+</html>

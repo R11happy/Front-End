@@ -6,6 +6,7 @@
     <title>时间条实现</title>
     <script type="text/javascript" src="jquery-1.2.6.js"></script>
     <script type="text/javascript" src="jquery.jslider.js"></script>
+    <script type="text/javascript" src = "scripts/myTimeLine.js"></script>
     <style type="text/css">
     .defaultbar {
         margin-top: 10px;
@@ -35,6 +36,11 @@
 
     .defaultbar .jquery-jslider-hover {
         background-color: #000080;
+    }
+
+    .btn{
+        /*display: inline-block;*/
+        padding: 5px 1px;
     }
 
     fieldset {
@@ -75,11 +81,15 @@
 
 <body>
     <fieldset>
+        <div class="btn">
+            <button id = "start">开始</button>
+            <button id="pause">暂停</button>
+        </div>
         <dl>
-            <div id="slidercontainer1">
-            </div>
+            <div id="slidercontainer1"></div>
         </dl>
     </fieldset>
 </body>
 
 </html>
+

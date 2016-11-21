@@ -1,11 +1,11 @@
-(function($) {
+$(function() {
     $.extend($.fn, {
         /*实现一个jquery滑动条插件*/
         jSlider: function(setting) {
             var ps = $.extend({
                 renderTo: $(document.body),
                 enable: true,
-                initPosition: 'max',
+                initPosition: 'min',
                 size: { barWidth: 200, sliderWidth: 5 },
                 barCssName: 'defaultbar',
                 completedCssName: 'jquery-completed',
@@ -37,11 +37,10 @@
                 sw = slider.width();
 
             ps.limited = { min: 0, max: bw - sw };
-
+            console.log(ps.limited);
             //定位completedbar的填充长度以及slider左侧距离
             if (typeof window.$sliderProcess == 'undefined') {
-                window.$sliderProcess = new Function('obj1', 'obj2', 'left',
-                    'obj1.css(\'left\',left);obj2.css(\'width\',left);');
+                window.$sliderProcess = new Function('obj1', 'obj2', 'left','obj1.css(\'left\',left);obj2.css(\'width\',left);');
             }
 
 
@@ -54,8 +53,9 @@
                 drag: function(e) {
                     var d = e.data;
 
+                    // l:拖动过程中的width
                     var l = Math.min(Math.max(e.pageX - d.pageX + d.left, ps.limited.min), ps.limited.max);
-
+                    console.log(l);
                     $sliderProcess(slider, completedbar, l);
 
                     ps.onChanging(l / ps.limited.max, e);
@@ -86,4 +86,4 @@
             return slider;
         }
     });
-})(jQuery);
+});
